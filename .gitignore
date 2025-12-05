@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 node_modules/
 dist/
-public/r/
+my-react-app/public/r/
 *.zip
 *.exe
-/onlineResource/
+onlineResource/
