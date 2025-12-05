@@ -5,7 +5,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import './banners.css'
-import SongCard from './components/SongCard'; // <-- Imported SongCard component
+import SongCard from '.src/components/SongCard';
 
 // IMPORTANT: You must install and configure react-router-dom.
 // Replace the placeholder Link below with: import { Link } from 'react-router-dom';

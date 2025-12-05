@@ -27,3 +27,4 @@ dist/
 public/r/
 *.zip
 *.exe
+/onlineResource/
