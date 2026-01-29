@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="musicApp"> <head>
+    <title>Spicify - Music Player</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="musicCtrl">
+
+    <div style="padding: 20px; font-family: sans-serif;">
+        <h1>My Music Domain</h1>
+
+        <input type="text" 
+               placeholder="Search for a song..." 
+               ng-model="searchText"
+               ng-focus="status = 'Searching...'" 
+               ng-blur="status = 'Waiting...'">
+        
+        <p>Status: <strong>{{ status }}</strong></p>
+
+        <hr>
+
+        <div ng-repeat="song in songs | filter:searchText">
+            <div style="padding: 10px; border: 1px solid #ddd; margin-bottom: 5px;"
+                 ng-mouseenter="style={'background-color':'#f0f0f0'}" 
+                 ng-mouseleave="style={'background-color':'white'}"
+                 ng-style="style"> <strong>{{ song.title }}</strong> - {{ song.artist }}
+                
+                <button ng-click="playSong(song.title)" style="float: right;">Play</button>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module('musicApp', []);
+        app.controller('musicCtrl', function($scope, $http) {
+            $scope.status = "Waiting...";
+            $scope.songs = [];
+
+            // This fetches your JSON file
+            $http.get('data.json').then(function(response) {
+                $scope.songs = response.data;
+            });
+
+            $scope.playSong = function(title) {
+                alert("Now playing: " + title);
+            };
+        });
+    </script>
+</body>
+</html>

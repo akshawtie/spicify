@@ -10,22 +10,7 @@
     box-sizing: border-box;
 }
 
-body, html {
-    margin: 0;        /* Removes default browser margins */
-    padding: 0;       /* Removes default browser padding */
-}
 
-body {
-    background-color: #080517;
-    /* Removed height: 100vh; and overflow: hidden; to allow scrolling */
-}
-
-hr {
-    height: 0.01em;
-    color: hsla(257, 100%, 3%, 0);
-    border-color: #fcddfe4f;
-    margin: 0; /* Ensures no extra space around the line */
-}
 
 
 /* --- NAVBAR & LOGO FIXES --- */

@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25px;
+    color: #c922d5;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 25px 10px 0px; 
+    width: calc(100% - 50px); 
+}
+.nav-left a {
+    font-size: 2.4em;
+    text-decoration: none;
+    color: #f1cdf4;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.nav-right a {
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #f1cdf4;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+body, html {
+    margin: 0;       
+    padding: 0;      
+}
+.melody2_img{
+    height:7vh;
+    width:7vh;
+
+}
+
+hr {
+    height: 0.01em;
+    color: hsla(257, 100%, 3%, 0);
+    border-color: #fcddfe4f;
+    margin: 0; 
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "B.Y.O.B",
+    "artist": "System of a Down",
+    "genre": "Metal",
+    "year": 2005
+  },
+  {
+    "id": 2,
+    "title": "Piggies",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "year": 1968
+  },
+  {
+    "id": 3,
+    "title": "Prithibi Ta Naki",
+    "artist": "Moheener Ghoraguli",
+    "genre": "Folk Rock",
+    "year": 1977
+  }
+]

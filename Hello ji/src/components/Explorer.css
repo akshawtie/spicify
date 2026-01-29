@@ -1,0 +1,105 @@
+import Ex
+.posters {
+    display: flex;
+    width: 76em;
+    margin-top: 0em;
+    margin-left: 0px;
+    padding: 0px;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+    flex-direction: row;
+}
+
+.mainright {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 0.5%;
+    /* FIX: Adjusted width for a clean 25%/75% split with 0.5% gap */
+    width: 74.5%; 
+    padding: 0.1rem;
+    padding-right: 1.5em;
+    border: 0.5rem;
+    border-radius: 3%;
+    background-color: rgba(255, 255, 255, 0.04);
+    /* FIX: Now takes 100% of the calculated parent height */
+    height: 100%; 
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+}
+
+.fav {
+    size: 1.3em;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    margin-bottom: -0.4rem;
+    border-radius: 10%;
+}
+
+.headtext {
+    display: inline-block;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2rem;
+    color: #decfff;
+    padding: none;
+    border: none;
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Duplicated/Similar Poster Styles */
+.posterL {
+    margin-left: 1em;
+    height: 15.2em;
+    width: 10.4em;
+    margin-right: 0.3em;
+    border-radius: 1em;
+}
+
+.poster3 {
+    height: 15.2em;
+    border-radius: 1em;
+    width: 10.4em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+.poster2 {
+    margin-right: 0.3em;
+    height: 11.4em;
+    width: 11.4em;
+    margin-left: 0.5rem;
+    margin-top: 2.5em;
+    border-radius: 50%;
+}
+
+/* Unused/Legacy Styles */
+.poster1 {
+    height: 15.2em;
+    width: 10.4em;
+    margin: 0.1em;
+    padding: 1em;
+    color: beige;
+    border-radius: 1em;
+}
+
+.radioh {
+    color: #fa0303;
+}
+
+.radioh a {
+    text-decoration: none;
+    color: #fa0303;
+}
+
+.queentemp {
+    color: #decfff;
+}
+.mainright {
+  /* This takes 100% of the space minus the width of your sidebar */
+  width: calc(100% - 25%); 
+  height: 100vh;
+  /* ... rest of your code */
+}

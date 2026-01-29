@@ -1,0 +1,95 @@
+.songimg{
+    height:10vh;
+    width:10vh;
+}
+
+/* --- SIDEBAR & SONG CARD STYLES --- */
+.leftheadtext {
+    display: inline-block;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2em;
+    margin-left: 1%;
+    color: #f7dafc;
+    padding: none;
+    margin-bottom: 10px;
+}
+
+.activity-scroll {
+    overflow-y: auto;
+    padding: 0.2rem;
+    flex: 1;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.songcard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.2em;
+    border-radius: 10px;
+    background-color: #c2bec209;
+    height: 2rem;
+}
+
+.songimg {
+    height: 2.7em;
+    width: 2.7em;
+    border: 0;
+    border-radius: 10%;
+    background-color: #3330305f;
+}
+
+.textblock {
+    display: flex;
+    flex-direction: column;
+}
+
+.maintext {
+    font-weight: 300;
+    padding: 0;
+    color: #f7dafc;
+    margin-top: 1em;
+    font-family: "pixelify sans", sans-serif;
+    font-optical-sizing: auto;
+    margin-bottom: 0.5em;
+}
+
+.subtext {
+    font-size: 0.8em;
+    font-family: "Doto", sans-serif;
+    color: #dfd6d6;
+    margin-top: -0.5em;
+}
+
+.textblock a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.melody_img {
+    height: 1.3rem;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.melody2_img {
+    height: 2.2em;
+    padding-left: none;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.leftheadcontainer {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    z-index: 1;
+}
