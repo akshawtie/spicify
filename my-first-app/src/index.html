@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-<html ng-app="musicApp"> <head>
-    <title>Spicify - Music Player</title>
+<html ng-app="musicApp">
+<head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .highlight { background-color: #f0f0f0; border: 1px solid #007bff; }
+        .song-item { padding: 10px; cursor: pointer; border-bottom: 1px solid #ddd; }
+        .active { color: green; font-weight: bold; }
+    </style>
 </head>
-<body ng-controller="musicCtrl">
+<body ng-controller="MusicController">
 
-    <div style="padding: 20px; font-family: sans-serif;">
-        <h1>My Music Domain</h1>
+    <h1>🎵 My Music Player</h1>
 
-        <input type="text" 
-               placeholder="Search for a song..." 
-               ng-model="searchText"
-               ng-focus="status = 'Searching...'" 
-               ng-blur="status = 'Waiting...'">
-        
-        <p>Status: <strong>{{ status }}</strong></p>
+    <input type="text" 
+           placeholder="Search songs..." 
+           ng-model="searchQuery"
+           ng-focus="status = 'Searching...'" 
+           ng-blur="status = 'Select a song'">
+    
+    <p>Status: <strong>{{ status }}</strong></p>
 
-        <hr>
-
-        <div ng-repeat="song in songs | filter:searchText">
-            <div style="padding: 10px; border: 1px solid #ddd; margin-bottom: 5px;"
-                 ng-mouseenter="style={'background-color':'#f0f0f0'}" 
-                 ng-mouseleave="style={'background-color':'white'}"
-                 ng-style="style"> <strong>{{ song.title }}</strong> - {{ song.artist }}
-                
-                <button ng-click="playSong(song.title)" style="float: right;">Play</button>
-                <div style="clear: both;"></div>
-            </div>
+    <div class="playlist">
+        <h3>Playlist</h3>
+        <div class="song-item" 
+             ng-repeat="song in songs | filter:searchQuery" 
+             ng-mouseenter="hovering = true" 
+             ng-mouseleave="hovering = false"
+             ng-class="{'highlight': hovering}">
+            
+            <span>{{ song.title }} - {{ song.artist }}</span>
+            
+            <button ng-click="playSong(song)">Play</button>
         </div>
+    </div>
+
+    <hr>
+    <div ng-if="currentSong">
+        <p class="active">Now Playing: {{ currentSong.title }} by {{ currentSong.artist }}</p>
     </div>
 
     <script>
         var app = angular.module('musicApp', []);
-        app.controller('musicCtrl', function($scope, $http) {
-            $scope.status = "Waiting...";
+
+        app.controller('MusicController', function($scope, $http) {
+            $scope.status = "Select a song";
             $scope.songs = [];
 
-            // This fetches your JSON file
-            $http.get('data.json').then(function(response) {
+            // Fetching the JSON file
+            $http.get('playlist.json').then(function(response) {
                 $scope.songs = response.data;
             });
 
-            $scope.playSong = function(title) {
-                alert("Now playing: " + title);
+            $scope.playSong = function(song) {
+                $scope.currentSong = song;
+                alert("Now playing: " + song.title);
             };
         });
     </script>

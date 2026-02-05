@@ -18,47 +18,25 @@ function Explorer(){
           <div className="posters">
 
             <Link to="/album/queen"><img src="/r/r1p2.jpg" className="posterL" alt="Poster" /></Link>
-
             <Link to="/album/radiohead"><img src="/r/r1p1.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r1p3.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r1p4.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r1p5.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/radiohead"><img src="/r/tvpfp.jpg" className="poster2" alt="Profile Picture" /></Link>
 
           </div>
-
-         
-
           {/* Radiohead Section */}
-
           <a className="headtext">
-
             <img src="/r/rdhdfav.jpg" className="fav" alt="Radiohead favorite" /> Radiohead....
-
           </a>
-
           <div className="posters">
-
             <Link to="/album/queen"><img src="/r/r2p1.jpg" className="posterL" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r2c2.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r1c3.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r2p7.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r2p8.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/radiohead"><img src="/r/r1c1.jpg" className="poster2" alt="Poster" /></Link>
-
           </div>
-
-         
-
           {/* Umbrella Rock Section */}
 
           <a className="headtext">
@@ -70,15 +48,10 @@ function Explorer(){
           <div className="posters">
 
             <Link to="/album/queen"><img src="/r/r3p1.jpg" className="posterL" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r3p4.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r3p3.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r3p5.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/queen"><img src="/r/r3p2.jpg" className="poster3" alt="Poster" /></Link>
-
             <Link to="/album/radiohead"><img src="/r/jeffpfp.png" className="poster2" alt="Profile Picture" /></Link>
 
           </div>
